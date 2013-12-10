@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+
+<!-- A wrapper for all the blog posts -->
+<div class="posts">
+    <h1 class="content-subhead">Publié le <%= @moment(@document.date).format('DD/MM/YYYY') %></h1>
+
+    <!-- A single blog post -->
+    <section class="post">
+        <header class="post-header">
+            <img class="post-avatar" alt="Florian avatar" height="48" width="48" src="/img/worm.png">
+
+            <a href="#post">
+                <h2 class="post-title"><%= @document.title %></h2>
+            </a>
+
+            <p class="post-meta">
+                <% if @document.tags: %>
+                    Catégories :
+                    <% for tag in @document.tags: %>
+                    <a class="post-category post-category-generic" href="#"><%= tag %></a>
+                    <% end %>
+                <% end %>
+            </p>
+        </header>
+
+        <div class="post-description">
+            <p>
+                <%- @content %>
+            </p>
+        </div>
+    </section>
+</div>

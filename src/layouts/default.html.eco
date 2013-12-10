@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="<%= @getPreparedDescription() %>" />
+    <meta name="keywords" content="<%= @getPreparedKeywords() %>" />
+    <meta name="author" content="<%= @site.author or '' %>" />
+
+    <%- @getBlock("meta").toHTML() %>
+    <title><%= @getPreparedTitle() %></title>
+    <%- @getBlock("styles").toHTML() %>
+
+    <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Subscribe to my RSS feed" />
+    <link rel="stylesheet" href="/css/pure-min-0.3.0.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/zenburn.css">
+    <link href='http://fonts.googleapis.com/css?family=Signika+Negative|Orienta' rel='stylesheet' type='text/css'>
+
+    <!-- Shims: IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script async src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="pure-menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu pure-menu-open">
+            <a class="pure-menu-heading">Mis à jour récemment</a>
+
+            <ul>
+                <% for post in @getCollection("posts").toJSON()[0...4]: %>
+                <li class="<%= @isMenuSelected(post) %>">
+                    <a href="<%= post.url %>">
+                        <%= post.title %>
+                    </a>
+                </li>
+                <% end %>
+            </ul>
+
+            <!--<ul>-->
+
+            <!--<li class="menu-item-divided">-->
+            <!--<a href="#fork">Fork on Github</a>-->
+            <!--</li>-->
+            <!--<li><a href="#hello">Say hello</a></li>-->
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="pure-menu pure-menu-open pure-menu-fixed pure-menu-fixed-custom pure-menu-horizontal">
+            <a class="pure-menu-heading" id="title" href="/"><%= @site.title %></a>
+
+            <ul>
+                <% for page in @getCollection("pages").toJSON(): %>
+                <li class="<%= @isMenuSelected(page) %>">
+                    <a href="<%= page.url %>">
+                        <%= page.menuLabel %>
+                    </a>
+                </li>
+                <% end %>
+            </ul>
+
+        </div>
+
+        <div class="content">
+            <%- @content %>
+        </div>
+    </div>
+
+    <!--<footer class="footer">-->
+    <!--<div class="pure-menu pure-menu-horizontal pure-menu-open">-->
+    <!--<ul>-->
+    <!--<li><a href="http://purecss.io/">About</a></li>-->
+    <!--<li><a href="http://twitter.com/yuilibrary/">Twitter</a></li>-->
+    <!--<li><a href="http://github.com/yui/pure/">Github</a></li>-->
+    <!--</ul>-->
+    <!--</div>-->
+    <!--</footer>-->
+
+</div>
+
+<%- @getBlock("scripts").toHTML() %>
+<script src="/js/ui.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+{
+  "name": "eu.boulay.blog.docpad",
+  "version": "0.0.1",
+  "description": "Florian's website based on Pure CSS library",
+  "author": "Florian Boulay <florian.boulay@gmail.com> (http://blog.boulay.eu)",
+  "licence": "MIT",
+  "engines": {
+    "node": "0.10",
+    "npm": "1.3"
+  },
+  "maintainers": [
+    {
+      "name": "Florian Boulay",
+      "email": "florian.boulay@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fboulay/website.git"
+  },
+  "dependencies": {
+    "docpad": "~6.57.0",
+    "docpad-plugin-marked": "~2.1.2",
+    "docpad-plugin-eco": "~2.0.2",
+    "docpad-plugin-moment": "~2.0.2",
+    "docpad-plugin-cleanurls": "~2.6.0",
+    "docpad-plugin-highlightjs": "~2.1.8",
+    "docpad-plugin-paged": "~2.2.3",
+    "docpad-plugin-rss": "~2.0.1",
+    "docpad-plugin-services": "~2.4.6",
+    "docpad-plugin-datefromfilename": "~2.0.4"
+  },
+  "devDependencies": {
+    "docpad-plugin-livereload": "~2.5.3"
+  },
+  "keywords": [
+    "docpad",
+    "blog",
+    "docker"
+  ],
+  "main": "node_modules/docpad/bin/docpad-server",
+  "scripts": {
+    "start": "node_modules/docpad/bin/docpad-server"
+  }
+}

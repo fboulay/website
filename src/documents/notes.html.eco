@@ -1,0 +1,20 @@
+---
+title: "List of my technical notes"
+layout : "default"
+name: "notes"
+
+isPage: true
+menuLabel: "Mémos techniques"
+menuOrder: 2
+---
+
+<div class="header">
+    <h3>&ldquo;<%= @site.subtitle %>&rdquo;</h3>
+</div>
+
+<p>
+    Cette page contiendra une liste d'aide-mémoires sur des sujets sur lesquels j'ai tout le temps recours au web, comme par
+    exemple la liste des codes HTTP, certaines commandes git, ou d'autre commandes Linux.
+</p>
+
+<blockquote class="content-quote">TODO</blockquote>

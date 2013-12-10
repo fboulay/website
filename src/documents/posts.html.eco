@@ -1,0 +1,78 @@
+---
+title: "Welcome !"
+layout: "default"
+name: "posts"
+
+isPaged: true
+pagedCollection: 'posts'
+pageSize: 5
+
+isPage: true
+menuLabel: "Blog"
+menuOrder: 1
+---
+
+<div class="header">
+    <h1>In code we trust</h1>
+
+    <h2>Thoughts from a java developer</h2>
+</div>
+
+<div class="posts">
+    <% for post in @getCollection("posts").toJSON()[@document.page.startIdx...@document.page.endIdx]: %>
+    <h1 class="content-subhead">Le <%= @moment(post.date).format('DD/MM/YYYY') %></h1>
+
+    <section class="post">
+        <header class="post-header">
+            <img class="post-avatar" alt="Florian avatar" height="48" width="48" src="/img/worm.png">
+
+            <a href="<%= post.url %>">
+                <h2 class="post-title"><%= post.title %></h2>
+            </a>
+
+            <p class="post-meta">
+                <% if post.tags: %>
+                Catégories
+                    <% for tag in post.tags: %>
+                    <a class="post-category post-category-yui" href="#"><%= tag %></a>
+                    <% end %>
+                <% end %>
+            </p>
+        </header>
+
+        <div class="post-description">
+            <p>
+                <%- @extractSummary(post.contentRenderedWithoutLayouts) %>
+            </p>
+        </div>
+        <div>
+            <a class="pure-button pure-button-small" href="<%= post.url %>">Lire la suite</a>
+        </div>
+    </section>
+    <% end %>
+
+    <% if @hasPrevPage() or @hasNextPage(): %>
+    <ul class="pure-paginator pure-paginator-custom">
+        <% unless @hasPrevPage(): %>
+        <li><a class="pure-button prev pure-button-disabled" href="#" title="Previous page">&#171;</a></li>
+        <% else: %>
+        <li><a class="pure-button prev" href="<%= @getPrevPage() %>">&#171;</a></li>
+        <% end %>
+
+        <% for pageNumber in [0..@document.page.count-1]: %>
+            <% if @document.page.number is pageNumber: %>
+            <li><a class="pure-button pure-button-active" href="#"><%= pageNumber + 1 %></a></li>
+            <% else: %>
+            <li><a class="pure-button" href="<%= @getPageUrl(pageNumber) %>"><%= pageNumber + 1 %></a></li>
+            <% end %>
+        <% end %>
+
+        <!-- Next Page Button -->
+        <% unless @hasNextPage(): %>
+        <li><a class="pure-button next pure-button-disabled" href="#">&#187;</a></li>
+        <% else: %>
+        <li><a class="pure-button next" href="<%= @getNextPage() %>" title="Next page">&#187;</a></li>
+        <% end %>
+    </ul>
+    <% end %>
+</div>
