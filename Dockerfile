@@ -22,7 +22,7 @@ RUN apt-get install -y npm nodejs git
 
 # install docpad and run it
 #RUN npm install -g npm
-RUN npm install -g docpad
+RUN npm install docpad
 #RUN git clone git://github.com/axyz/zurb-foundation.docpad.git
 #RUN git clone https://github.com/balupton/website.git balupton
 #RUN cd balupton && npm install
