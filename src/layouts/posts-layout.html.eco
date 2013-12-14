@@ -31,5 +31,6 @@ layout: default
                 <%- @content %>
             </p>
         </div>
+        <%- @getDisqus() %>
     </section>
 </div>

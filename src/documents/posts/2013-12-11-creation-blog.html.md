@@ -1,5 +1,7 @@
 ---
-title: "Je sais que ça peut paraître désuet, mais je me suis créé un blog"
+title: "Il y en a déjà beaucoup de blog techiques, je crée mon blog quand même"
 layout: "posts-layout"
 tags: "blog,docker,docpad"
+
+ignore: true
 ---
