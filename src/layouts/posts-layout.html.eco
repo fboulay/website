@@ -19,7 +19,7 @@ layout: default
                 <% if @document.tags: %>
                     Catégories :
                     <% for tag in @document.tags: %>
-                    <a class="post-category post-category-generic" href="#"><%= tag %></a>
+                    <a class="post-category" href="#"><%= tag %></a>
                     <% end %>
                 <% end %>
             </p>
@@ -28,8 +28,15 @@ layout: default
         <div class="post-description">
             <p>
                 <%- @content %>
-            </p>
+            </p>           
         </div>
+
+            <p class="post-meta">
+                Vous pouvez partager ce post :
+
+                <a class="pure-button pure-button-xsmall btn-tweet" href="https://twitter.com/share?url=<%= @getUrl(@document) %>&text=<%= @document.title %>&via=FlorianBoulay" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;">Twitter</a>
+                <a class="pure-button pure-button-xsmall btn-google" href="https://plus.google.com/share?url=<%= @getUrl(@document) %>" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">Google+</a>
+            </p>
         <%- @getDisqus() %>
     </section>
 </div>

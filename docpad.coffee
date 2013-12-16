@@ -52,6 +52,10 @@ docpadConfig = {
     extractSummary: (contentRendered) ->
       if contentRendered
         contentRendered.split(/<h[123456]/)[0]
+
+    # Get the Absolute URL of a document
+    getUrl: (document) ->
+      return @site.url + (document.url or document.get?('url'))
   }
   collections:  {
     pages: ->

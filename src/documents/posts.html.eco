@@ -34,7 +34,7 @@ menuOrder: 1
                 <% if post.tags: %>
                 Catégories
                     <% for tag in post.tags: %>
-                    <a class="post-category post-category-yui" href="#"><%= tag %></a>
+                    <a class="post-category post-category-generic" href="#"><%= tag %></a>
                     <% end %>
                 <% end %>
             </p>

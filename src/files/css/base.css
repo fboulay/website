@@ -376,6 +376,11 @@ small screens.
     font-size: 85%;
 }
 
+ .pure-button-xsmall {
+    color: #fff;
+    font-size: 70%;
+}
+
 .pure-paginator-custom {
     margin-top: 10px;
     text-align: center;
