@@ -1,0 +1,9 @@
+{
+  name: ""
+  email: null
+  username: ""
+  subscribed: false
+  subscribeTryAgain: null
+  tos: true
+  identified: true
+}

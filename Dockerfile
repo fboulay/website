@@ -22,9 +22,8 @@ RUN apt-get install -y npm nodejs=0.10.21* git
 
 # install docpad and run it
 RUN npm install docpad
-RUN adduser --disabled-password --gecos "" florian
+ADD .docpad.cson /
 
 WORKDIR /www
-CMD ["docpad", "run", "--env", "production"]
+CMD ["/www/node_modules/docpad/bin/docpad", "run", "--env", "production"]
 EXPOSE 9778
-USER florian
