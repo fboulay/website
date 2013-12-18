@@ -18,15 +18,13 @@ RUN apt-get install -y python-software-properties
 RUN add-apt-repository ppa:richarvey/nodejs 
 RUN add-apt-repository ppa:git-core/ppa
 RUN apt-get update
-RUN apt-get install -y npm nodejs:0.10.21 git
+RUN apt-get install -y npm nodejs=0.10.21* git
 
 # install docpad and run it
-RUN npm install docpad@6.57
+RUN npm install docpad
+RUN adduser --disabled-password --gecos "" florian
 
 WORKDIR /www
-CMD ["/www/node_modules/docpad/bin/docpad-server"]
+CMD ["docpad", "run", "--env", "production"]
 EXPOSE 9778
-
-
-
-
+USER florian

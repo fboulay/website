@@ -89,6 +89,9 @@ docpadConfig = {
       removeDate: true
     }
   }
+
+  # Regenerate every hour
+  regenerateEvery: 3600000
 }
 
 # Export the DocPad Configuration
