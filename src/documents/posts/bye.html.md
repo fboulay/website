@@ -5,6 +5,7 @@ date: 2013-12-01
 tags: ""
 
 isPage: false
+ignore: true
 ---
 
 Bye bye cruel **World!**

@@ -23,19 +23,13 @@ Note : to be able to use docker without being root, you should add your user to 
 ./build.sh
 ```
 
-#### 3\. Deploy the website in the Docker container
-
-```bash
-./deploy.sh
-```
-
-#### 4\. Run the website in the Docker container
+#### 3\. Run the website in the Docker container
 
 ```bash
 ./run.sh
 ```
 
-Go to http://localhost:4242 to browse the website.
+Go to http://localhost:42042 to browse the website.
 
 
 ### Install *without* Docker (Hard way)

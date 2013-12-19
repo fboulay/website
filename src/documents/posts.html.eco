@@ -14,8 +14,7 @@ menuOrder: 1
 
 <div class="header">
     <h1>In code we trust</h1>
-
-    <h2>Thoughts from a java developer</h2>
+    <!-- h2>Thoughts from a java developer</h2 -->
 </div>
 
 <div class="posts">
