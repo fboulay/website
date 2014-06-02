@@ -9,7 +9,7 @@ docpadConfig = {
     site:    {
       url: "http://blog.boulay.eu"
       title: "Florian's blog / Java & Co."
-      subtitle: "Vous voulez un whisky ?"
+      subtitle: "In code we trust"
       description: """
                    Florian's point of view on the software industry world, particularly about Open Source, Java, Android, Git, Docker, Docpad and so on
                    """

@@ -13,7 +13,7 @@ menuOrder: 1
 ---
 
 <div class="header">
-    <h1>In code we trust</h1>
+    <h2>&ldquo;<%= @site.subtitle %>&rdquo;</h2>
     <!-- h2>Thoughts from a java developer</h2 -->
 </div>
 
@@ -23,7 +23,7 @@ menuOrder: 1
 
     <section class="post">
         <header class="post-header">
-            <img class="post-avatar" alt="Florian avatar" height="48" width="48" src="/img/worm.png">
+            <!--<img class="post-avatar" alt="Florian avatar" height="48" width="48" src="/img/worm.png">-->
 
             <a href="<%= post.url %>">
                 <h2 class="post-title"><%= post.title %></h2>

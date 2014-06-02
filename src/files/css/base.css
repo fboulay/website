@@ -10,8 +10,23 @@ a {
 
 h1,
 h2,
-h3{
+h3 {
     color: #333;
+}
+
+code {
+    border-radius: .5em;
+    border-radius: .5em;
+    background: #f2ead4;
+    color: #232929;
+    font-weight: 500;
+    font-size: .75em;
+    font-family: Consolas, Menlo, Monaco, 'Source Code Pro', 'courier new', monospace, serif;
+    display: inline-block;
+    padding: .05em .5em 0;
+    margin: .4em .2em .2em 0;
+    border: 1px solid #dee2e3;
+    white-space: pre;
 }
 
 /*
@@ -34,7 +49,6 @@ This is the parent `<div>` that contains the menu and the content area.
     padding-left: 200px; /* left col width "#menu" */
     left: 0;
 }
-
 
 /*
 The content `<div>` is where all your content goes.
@@ -158,7 +172,7 @@ The content `<div>` is where all your content goes.
     position: fixed;
     /*margin-top: -150px;*/
     /*height: 150px;*/
-    clear:both;
+    clear: both;
     bottom: -5px;
     left: 40%;
 }
@@ -376,7 +390,7 @@ small screens.
     font-size: 85%;
 }
 
- .pure-button-xsmall {
+.pure-button-xsmall {
     color: #fff;
     font-size: 70%;
 }
