@@ -27,7 +27,7 @@ J'ai choisi Docpad pour plusieurs raisons. Il est en Javascript contrairement au
 C'est également une bonne occasion de faire du Node.js, puisque Docpad tourne dessus.
 
 ## Les plugins Docpad
-Docpad est simple d'utilisation et est extensible via des plugins. Plugins qui sont "simples" à coder quant on connaît Javascript (ou coffeescript). Ces plugins permettent d'écrire les posts dans le format de son choix du moment qu'un plugin gère le rendu. Par exemple ce post est écrit en Markdown, mais il aurait pu être écrit en HTML ou en AsciiDoc.
+Docpad est simple d'utilisation et est extensible via des plugins. Plugins qui sont "simples" à coder quant on connaît Javascript (ou coffeescript). Ces plugins permettent d'écrire les posts dans le format de son choix du moment qu'un plugin gère le rendu. Par exemple ce post est écrit en Markdown, mais il aurait pu être écrit en HTML ou en Ruby.
 
 Les plugins permettent une intégration facile avec les services externes comme Disqus ou Google Analytics. À ce sujet, sachez que j'ai mis un tracker Google Analytics sur ce blog car la machine sur laquelle il tourne est peu puissante. Cela me permettra le cas échéant de mieux la dimensioner.
 
