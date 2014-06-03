@@ -15,7 +15,7 @@ Pour ce premier post, je vais me permettre de partager les choix que j'ai voulu 
 
 Afin de me faciliter la vie en tant qu'unique auteur, j'ai regardé ce qui me semblait le plus pratique. Après avoir perdu beaucoup de temps à administrer un blog Wordpress dans un ancien job, je me suis dit qu'un blog généré statiquement était plus en phase avec mes attentes de développeur.
 
-Les blogs statiques sont nombreux et tous ont leur défenseurs :
+Les blogs statiques sont nombreux, par exemple :
 * Jekyll
 * Octopress
 * Pelican
