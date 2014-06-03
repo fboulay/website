@@ -78,8 +78,8 @@ The content `<div>` is where all your content goes.
 .posts-summary > .content-subhead:before {
     content: "";
     position: relative;
-    left: -25px;
-    top: 28px;
+    left: -28px;
+    top: 25px;
     display: block;
     width: 14px;
     height: 14px;
