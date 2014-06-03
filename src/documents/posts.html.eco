@@ -17,7 +17,7 @@ menuOrder: 1
     <!-- h2>Thoughts from a java developer</h2 -->
 </div>
 
-<div class="posts">
+<div class="posts posts-summary">
     <% for post in @getCollection("posts").toJSON()[@document.page.startIdx...@document.page.endIdx]: %>
     <h1 class="content-subhead">Le <%= @moment(post.date).format('DD/MM/YYYY') %></h1>
 
@@ -35,6 +35,9 @@ menuOrder: 1
                     <% for tag in post.tags: %>
                     <a class="post-category post-category-generic" href="#"><%= tag %></a>
                     <% end %>
+                <% end %>
+                <% if post.readingTime: %>
+                &ndash; Temps de lecture <%= post.readingTime %>
                 <% end %>
             </p>
         </header>

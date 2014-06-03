@@ -16,15 +16,13 @@ h3 {
 
 code {
     border-radius: .5em;
-    border-radius: .5em;
     background: #f2ead4;
     color: #232929;
     font-weight: 500;
     font-size: .75em;
     font-family: Consolas, Menlo, Monaco, 'Source Code Pro', 'courier new', monospace, serif;
     display: inline-block;
-    padding: .05em .5em 0;
-    margin: .4em .2em .2em 0;
+    padding: 0 .2em;
     border: 1px solid #dee2e3;
     white-space: pre;
 }
@@ -62,13 +60,14 @@ The content `<div>` is where all your content goes.
     margin-right: 50px;
     margin-top: 50px;
     line-height: 1.6em;
+    font-size: 1.1em;
 }
 
 .content-subhead {
     font-family: 'Orienta', sans-serif;
     text-transform: uppercase;
     color: #aaa;
-    border-bottom: 1px dotted #888;
+    border-bottom: 1px solid #888;
     padding: 0.4em 0;
     font-size: 80%;
     font-weight: 500;
@@ -76,12 +75,26 @@ The content `<div>` is where all your content goes.
     display: inline-block;
 }
 
+.posts-summary > .content-subhead:before {
+    content: "";
+    position: relative;
+    left: -25px;
+    top: 25px;
+    display: block;
+    width: 14px;
+    height: 14px;
+    border: 3px solid #d2d3d2;
+    border-radius: 14px;
+    background: #f9f9f9;
+}
+
 .header {
     margin: 0;
     color: #333;
     text-align: center;
-    padding: 1em 2em 0;
+    padding: 1em 2em;
     border-bottom: 1px solid #eee;
+    margin-bottom: 2em;
 }
 
 .header h1 {
@@ -107,6 +120,11 @@ The content `<div>` is where all your content goes.
     margin: 0.2em 0;
 }
 
+.posts-summary {
+    border-left: 2px solid #e8e8e8;
+    padding-left: 1em;
+}
+
 .post-avatar {
     border-radius: 50px;
     float: right;
@@ -121,7 +139,7 @@ The content `<div>` is where all your content goes.
 }
 
 .post-title {
-    font-size: 2em;
+    font-size: 2.5em;
     color: #222;
     margin-bottom: 0.2em;
 }

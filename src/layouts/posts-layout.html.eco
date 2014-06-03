@@ -12,7 +12,7 @@ layout: default
         <header class="post-header">
 
             <a href="#post">
-                <h2 class="post-title"><%= @document.title %></h2>
+                <h1 class="post-title"><%= @document.title %></h1>
             </a>
 
             <p class="post-meta">
@@ -21,6 +21,9 @@ layout: default
                     <% for tag in @document.tags: %>
                     <a class="post-category" href="#"><%= tag %></a>
                     <% end %>
+                <% end %>
+                <% if @document.readingTime: %>
+                &ndash; Temps de lecture <%= @document.readingTime %>
                 <% end %>
             </p>
         </header>
