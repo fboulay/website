@@ -49,7 +49,7 @@ _Screenshot du design pour la postérité_
 
 Un site statique est facile à déployer. Je n'ai eu qu'à créer un repository Git distant sur mon serveur. Un déploiement se résume ensuite à faire un `git push`.
 
-Ensuite un script s'occupe de faire le déploiement sur Docker.
+Ensuite un hook s'occupe de faire le déploiement sur Docker.
 
 ![Blog architecture](/img/2014-06-03-archi-blog.png "Blog architecture")
 
@@ -57,11 +57,11 @@ _Schéma simpliste de l'architecture actuelle_
 
 # Le nom du site
 
-Je possédais le domaine `boulay.eu` depuis des années et je n'en faisais pas grand chose. J'ai voulu choisir un nom un peu plus marquant, mais sans succès. Finalement ajouter un sous-domaine `blog` à `boulay.eu` m'a semble être le plus clair pour indiquer la fonction de du site.
+Je possédais le domaine `boulay.eu` depuis des années et je n'en faisais pas grand chose. J'ai voulu choisir un nom un peu plus marquant, mais sans succès. Finalement ajouter un sous-domaine `boulay.eu` m'a semblé être le plus clair pour indiquer la fonction du site.
 
 # Les sujets à venir
 
 J'ai plein de sujets en tête, et le temps va probablement me manquer pour écrire tout ce qui me vient par la tête. Je pense écrire sur NIO, Netty, Vert.x, Couchbase, JMH, la programmation de jeux vidéos...
 
-[David Gageot](http://blog.javabien.net/) arrive à faire un post par jour depuis plusieurs mois ; sans aller jusque là, j'espère faire un article intéressant par mois. Ce serait déjà un bel objectif.
+[David Gageot](http://blog.javabien.net/) arrive à faire un post par jour depuis plusieurs mois ; sans aller jusque là, j'espère faire un article intéressant par mois.
 Merci à mes premiers lecteurs, et à bientôt !
