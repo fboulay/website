@@ -7,7 +7,6 @@
     <meta name="keywords" content="<%= @getPreparedKeywords() %>" />
     <meta name="author" content="<%= @site.author or '' %>" />
 
-    <%- @getBlock("meta").toHTML() %>
     <title><%= @getPreparedTitle() %></title>
     <%- @getBlock("styles").toHTML() %>
 
