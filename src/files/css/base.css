@@ -472,3 +472,18 @@ Hides the menu at `767px`, but modify this based on your app's needs.
         margin-left: 0;
     }
 }
+
+@media (max-width: 430px) {
+    .pure-menu.pure-menu-horizontal > ul {
+        height: 100%;
+    }
+    .pure-menu-horizontal li {
+        display: list-item;
+    }
+    .header {
+        display: none;
+    }
+    .content {
+        margin-top: 5em;
+    }
+}
