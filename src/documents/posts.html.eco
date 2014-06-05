@@ -13,7 +13,7 @@ menuOrder: 1
 ---
 
 <div class="header">
-    <h2>&ldquo;<%= @site.subtitle %>&rdquo;</h2>
+    <h3>&ldquo;<%= @site.subtitle %>&rdquo;</h3>
     <!-- h2>Thoughts from a java developer</h2 -->
 </div>
 
