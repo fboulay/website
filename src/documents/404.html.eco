@@ -1,0 +1,14 @@
+---
+title: "Page not found - 404"
+layout: "default"
+name: error404
+dynamic: true
+---
+
+<h2>Error 404</h2>
+<p>
+This page does not exist <code><%= @site.url + @req.url %></code>.
+</p>
+<p>
+If you think this is not expected, please contact me.
+</p>

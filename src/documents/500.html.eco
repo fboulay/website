@@ -1,0 +1,14 @@
+---
+title: "An internal error occured - 500"
+layout: "default"
+name: error500
+dynamic: true
+---
+
+<h2>Error 500</h2>
+<p>
+An internal error occured on this page <code><%= @site.url + @req.url %></code>.
+</p>
+<p>
+Please try again later, or contact me.
+</p>
