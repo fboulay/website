@@ -4,4 +4,4 @@
 #docker run -p 42042:9778 -w www -v `pwd`:/www:ro fboulay/website_docpad
 CUR_DIR=`pwd`
 
-docker run -p 127.0.0.1:42042:9778 -v ${CUR_DIR}:/www fboulay/website_docpad
+docker run -d -p 127.0.0.1:42042:9778 -v ${CUR_DIR}:/www fboulay/website_docpad
