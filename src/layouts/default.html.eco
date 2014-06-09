@@ -1,3 +1,7 @@
+---
+htmlmin: true
+---
+
 <!doctype html>
 <html>
 <head>
