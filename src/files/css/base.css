@@ -27,6 +27,10 @@ code {
     white-space: pre;
 }
 
+img {
+    max-width: 100%;
+}
+
 /*
 Add transition to containers so they can push in and out.
 */
@@ -478,7 +482,7 @@ Hides the menu at `767px`, but modify this based on your app's needs.
         height: 100%;
     }
     .pure-menu-horizontal li {
-        display: list-item;
+        letter-spacing: -2px;
     }
     .header {
         display: none;
