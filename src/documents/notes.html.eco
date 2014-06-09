@@ -1,6 +1,5 @@
 ---
 title: "Mémos techniques dont j'ai besoin"
-layout : "default"
 name: "notes"
 
 isPage: true
@@ -17,4 +16,10 @@ menuOrder: 2
     exemple la liste des codes HTTP, certaines commandes git, ou d'autre commandes Linux.
 </p>
 
-<blockquote class="content-quote">TODO</blockquote>
+<div class="posts posts-summary">
+	<ul>
+    <% for memo in @getCollection("memos").toJSON(): %>
+    	<li><a href="<%= memo.url %>"><%= memo.title %></a></li>
+    <% end %>
+    </ul>
+</div>

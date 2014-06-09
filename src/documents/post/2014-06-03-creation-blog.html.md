@@ -1,6 +1,5 @@
 ---
 title: "Le blog de trop ?"
-layout: "posts-layout"
 tags: "blog,docker,docpad,git"
 readingTime : 3 min
 

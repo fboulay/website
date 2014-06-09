@@ -1,6 +1,5 @@
 ---
 title: "Derniers posts !"
-layout: "default"
 name: "posts"
 
 isPaged: true
