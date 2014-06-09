@@ -76,7 +76,9 @@ docpadConfig = {
 
   environments:  {
     development:    {
-
+      templateData: {
+        env:'dev'
+      }
     }
   }
 
