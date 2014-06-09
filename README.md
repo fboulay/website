@@ -13,7 +13,7 @@ This website is using static files that are generated using [DocPad](http://docp
 
 #### 1\. Install Docker
 
-See this [page](http://docs.docker.io/installation/#installation). The installation depends on the OS.
+See this [page](http://docs.docker.com/installation/). The installation depends on the OS.
 
 Note : to be able to use docker without being root, you should add your user to the _docker_ group.
 
