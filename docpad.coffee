@@ -93,7 +93,7 @@ docpadConfig = {
   }
 
   # Regenerate every hour
-  regenerateEvery: 3600000
+  #regenerateEvery: 3600000
 }
 
 # Export the DocPad Configuration
