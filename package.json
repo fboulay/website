@@ -19,19 +19,19 @@
     "url": "https://github.com/fboulay/website.git"
   },
   "dependencies": {
-    "docpad": "~6.57.0",
-    "docpad-plugin-marked": "~2.1.2",
-    "docpad-plugin-eco": "~2.0.2",
+    "docpad": "~6.68.1",
+    "docpad-plugin-cleanurls": "~2.7.0",
+    "docpad-plugin-datefromfilename": "~2.0.4",
+    "docpad-plugin-eco": "~2.0.3",
+    "docpad-plugin-highlightjs": "~2.2.1",
+    "docpad-plugin-marked": "~2.2.1",
     "docpad-plugin-moment": "~2.0.2",
-    "docpad-plugin-cleanurls": "~2.6.0",
-    "docpad-plugin-highlightjs": "~2.1.8",
-    "docpad-plugin-paged": "~2.2.3",
+    "docpad-plugin-paged": "~2.2.5",
     "docpad-plugin-rss": "~2.0.1",
-    "docpad-plugin-services": "~2.4.6",
-    "docpad-plugin-datefromfilename": "~2.0.4"
+    "docpad-plugin-services": "~2.6.0"
   },
   "devDependencies": {
-    "docpad-plugin-livereload": "~2.5.3"
+    "docpad-plugin-livereload": "~2.6.0"
   },
   "keywords": [
     "docpad",
