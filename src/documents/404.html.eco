@@ -3,6 +3,7 @@ title: "Page not found - 404"
 layout: "default"
 name: error404
 dynamic: true
+standalone: true
 ---
 
 <h2>Error 404</h2>

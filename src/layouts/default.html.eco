@@ -15,7 +15,7 @@ htmlmin: true
     <%- @getBlock("styles").toHTML() %>
 
     <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Subscribe to my RSS feed" />
-    <link rel="stylesheet" href="/css/all.css">
+    <link rel="stylesheet" href="/css/all<%= @Suffix %>.css">
     <link href='http://fonts.googleapis.com/css?family=Signika+Negative|Orienta' rel='stylesheet' type='text/css'>
 
     <!-- from http://realfavicongenerator.net/ -->

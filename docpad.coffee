@@ -82,9 +82,22 @@ docpadConfig = {
   localeCode: "fr"
 
   environments:  {
-    development:    {
+    development: {
       templateData: {
-        env:'dev'
+        minSuffix: ""
+      }
+      plugins: {
+        grunt:{
+          enabled: false
+        }
+        htmlmin: {
+          enabled: false
+        }
+      }
+    }
+    production:    {
+      templateData: {
+        minSuffix: ".min"
       }
     }
   }
@@ -104,9 +117,6 @@ docpadConfig = {
       }
     }
   }
-
-  # Regenerate every hour
-  #regenerateEvery: 3600000
 }
 
 # Export the DocPad Configuration
