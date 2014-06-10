@@ -66,9 +66,12 @@ docpadConfig = {
       @getCollection("html").findAllLive({relativeOutDirPath: 'post', isPagedAuto: $ne: true}, [{date: -1}]).on "add", (model) ->
         model.setMetaDefaults({layout: "posts-layout"});
 
-    memos: ->
+    notes: ->
       @getCollection("html").findAllLive({relativeOutDirPath: 'ref'}, [{date: -1}]).on "add", (model) ->
         model.setMetaDefaults({layout: "posts-layout"});
+
+    postsAndNotes: ->
+      @getCollection("html").findAllLive({relativeOutDirPath: $in: ['ref', 'post']}, [{date: -1}])
   }
   # =================================
   # Environment Configuration

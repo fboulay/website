@@ -62,10 +62,13 @@ htmlmin: true
             <a class="pure-menu-heading">Mis à jour récemment</a>
 
             <ul>
-                <% for post in @getCollection("posts").toJSON()[0...4]: %>
+                <% for post in @getCollection("postsAndNotes").toJSON()[0...4]: %>
                 <li class="<%= @isMenuSelected(post) %>">
                     <a href="<%= post.url %>">
                         <%= post.title %>
+                        <% if post.relativeOutDirPath == "ref": %>
+                            <i>(note)</i>
+                        <% end %>
                     </a>
                 </li>
                 <% end %>

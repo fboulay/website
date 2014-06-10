@@ -17,7 +17,7 @@ menuOrder: 2
 
 <div>
 	<ul>
-    <% for memo in @getCollection("memos").toJSON(): %>
+    <% for memo in @getCollection("notes").toJSON(): %>
     	<li><a href="<%= memo.url %>"><%= memo.title %></a></li>
     <% end %>
     </ul>

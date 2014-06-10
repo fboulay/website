@@ -40,14 +40,19 @@ blockquote {
 }
 
 blockquote cite {
-    font-style: normal;
-    color: #ccc;
-    display: block;
-    margin-top: 2px;
+  font-style: normal;
+  color: #ccc;
+  display: block;
+  margin-top: 2px;
 }
  
 blockquote cite:before {
-content: "\2014 \2009";
+  content: "\2014 \2009";
+}
+
+ul li i {
+    font-size: 0.8em;
+    color: #aaa;
 }
 
 /*
