@@ -31,6 +31,25 @@ img {
     max-width: 100%;
 }
 
+blockquote {
+  font-style: normal;
+  font-size: .9em;
+  margin-left: 32px;
+  border-left: 4px solid #CCC;
+  padding-left: 8px;
+}
+
+blockquote cite {
+    font-style: normal;
+    color: #ccc;
+    display: block;
+    margin-top: 2px;
+}
+ 
+blockquote cite:before {
+content: "\2014 \2009";
+}
+
 /*
 Add transition to containers so they can push in and out.
 */

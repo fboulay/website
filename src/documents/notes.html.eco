@@ -12,11 +12,10 @@ menuOrder: 2
 </div>
 
 <p>
-    Cette page contiendra une liste d'aide-mémoires sur des sujets sur lesquels j'ai tout le temps recours au web, comme par
-    exemple la liste des codes HTTP, certaines commandes git, ou d'autre commandes Linux.
+    Cette page contiendra une liste d'aide-mémoires personnels sur des sujets sur lesquels j'ai tout le temps recours au web, comme par exemple la liste des codes HTTP, certaines commandes git, ou d'autre commandes Linux.
 </p>
 
-<div class="posts posts-summary">
+<div>
 	<ul>
     <% for memo in @getCollection("memos").toJSON(): %>
     	<li><a href="<%= memo.url %>"><%= memo.title %></a></li>
