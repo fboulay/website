@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "docpad": "~6.68.1",
+    "docpad-plugin-cleancss": "~2.0.2",
     "docpad-plugin-cleanurls": "~2.7.0",
     "docpad-plugin-datefromfilename": "~2.0.4",
     "docpad-plugin-eco": "~2.0.3",
