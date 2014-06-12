@@ -31,7 +31,8 @@
     "docpad-plugin-moment": "~2.0.2",
     "docpad-plugin-paged": "~2.2.5",
     "docpad-plugin-rss": "~2.0.1",
-    "docpad-plugin-services": "~2.6.0"
+    "docpad-plugin-services": "~2.6.0",
+    "docpad-plugin-uglify": "~2.4.0"
   },
   "devDependencies": {
     "docpad-plugin-livereload": "~2.6.0",

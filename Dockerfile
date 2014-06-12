@@ -4,7 +4,7 @@
 # Tested with Docker 0.7
 
 # use the ubuntu base image provided by dotCloud
-FROM ubuntu:14.04
+FROM ubuntu:13.10
 MAINTAINER Florian Boulay florian.boulay@gmail.com
 
 # Update base packages
@@ -26,7 +26,8 @@ RUN npm install -g grunt-cli
 
 # Install Docpad
 RUN npm install -g docpad
-RUN apt-get install -y libfreetype6 libfontconfig1
+#RUN apt-get install -y libfreetype6 fontconfig
+RUN apt-get install -y libfontconfig1 fontconfig libfontconfig1-dev libfreetype6-dev net-tools
 RUN echo "{\n  subscribed: false\n  subscribeTryAgain: false\n  tos: true\n  identified: true\n}" > ~/.docpad.cson
 
 

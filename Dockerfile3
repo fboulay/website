@@ -1,0 +1,32 @@
+FROM centos:centos6
+
+# Setup
+RUN echo "exclude = *.i?86" >> /etc/yum.conf 
+RUN yum -y install wget
+RUN yum -y install tar
+RUN yum -y install which
+RUN yum -y install gcc gcc-c++
+RUN yum -y distro-sync
+RUN yum -y install openssl-devel
+
+# Install node, npm
+RUN wget http://nodejs.org/dist/v0.10.29/node-v0.10.29.tar.gz
+RUN tar xvf node-v0.10.29.tar.gz 
+RUN cd node-v0.10.29; ./configure; make; make install
+RUN node --version
+RUN CURL -s https://www.npmjs.org/install.sh | bash
+
+# Grunt
+RUN npm install -g grunt-cli
+
+# Install Docpad
+RUN npm install -g docpad
+#RUN yum -y install libfreetype6 fontconfig
+#RUN yum -y install libfontconfig1 fontconfig libfontconfig1-dev libfreetype6-dev net-tools
+RUN yum -y install freetype fontconfig
+RUN echo -e "{\n  subscribed: false\n  subscribeTryAgain: false\n  tos: true\n  identified: true\n}" > ~/.docpad.cson
+
+
+WORKDIR /www
+CMD ["/www/node_modules/docpad/bin/docpad", "run", "--env", "production"]
+EXPOSE 9778

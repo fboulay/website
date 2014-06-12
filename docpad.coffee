@@ -93,6 +93,9 @@ docpadConfig = {
         htmlmin: {
           enabled: false
         }
+        uglify: {
+          enabled: false
+        }
       }
     }
     production:    {

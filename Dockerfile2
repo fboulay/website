@@ -1,0 +1,35 @@
+# fboulay/docpad_debian
+#
+# VERSION       1.0
+# Tested with Docker 0.9
+#
+# Container base on Debian wheezy running Docpad in production environment with Grunt installed
+ 
+FROM google/debian:wheezy
+MAINTAINER Florian Boulay florian.boulay@gmail.com
+
+# Base setup
+RUN echo "deb http://ftp.us.debian.org/debian wheezy-backports main" >> /etc/apt/sources.list
+RUN apt-get update
+#RUN apt-get upgrade
+
+# Git, bzip
+RUN apt-get install -y curl git bzip2
+
+# NPM and Node
+RUN apt-get install -y nodejs-legacy
+RUN curl --insecure https://www.npmjs.org/install.sh | clean=no bash
+
+# Install Grunt
+RUN npm install -g grunt-cli
+
+# Install Docpad
+RUN npm install -g docpad
+#RUN apt-get install -y libfreetype6 fontconfig
+RUN apt-get install -y libfontconfig1 fontconfig libfontconfig1-dev libfreetype6-dev 
+RUN apt-get install -y net-tools
+RUN echo "{\n  subscribed: false\n  subscribeTryAgain: false\n  tos: true\n  identified: true\n}" > ~/.docpad.cson
+
+WORKDIR /www
+CMD ["/www/node_modules/docpad/bin/docpad", "run", "--env", "production"]
+EXPOSE 9778
