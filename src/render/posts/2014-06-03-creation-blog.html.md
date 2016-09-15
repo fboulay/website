@@ -3,7 +3,7 @@ title: "Le blog de trop ?"
 tags: "blog,docker,docpad,git"
 urls: ["/posts/creation-blog"]
 
-readingTime : 3 min
+readingTime: 3 min
 ---
 
 Malgré les nombreux articles intéressants que je trouve via Twitter et autre services, j'ai eu envie de créer mon blog et de contribuer à mon niveau à ce partage de connaissance.

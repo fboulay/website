@@ -5,8 +5,8 @@
   "author": "Florian Boulay <florian.boulay@gmail.com> (http://blog.boulay.eu)",
   "licence": "MIT",
   "engines": {
-    "node": "6",
-    "npm": "3"
+    "node": "4",
+    "npm": "2"
   },
   "maintainers": [
     {

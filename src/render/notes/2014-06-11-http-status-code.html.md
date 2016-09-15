@@ -1,7 +1,6 @@
 ---
 title: "HTTP status codes"
 
-ignore: false
 ---
 
 ## 1xx informational
