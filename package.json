@@ -5,8 +5,8 @@
   "author": "Florian Boulay <florian.boulay@gmail.com> (http://blog.boulay.eu)",
   "licence": "MIT",
   "engines": {
-    "node": "0.10",
-    "npm": "1.3"
+    "node": "6",
+    "npm": "3"
   },
   "maintainers": [
     {
@@ -19,29 +19,31 @@
     "url": "https://github.com/fboulay/website.git"
   },
   "dependencies": {
-    "docpad": "~6.68.1",
-    "docpad-plugin-cleancss": "~2.0.2",
-    "docpad-plugin-cleanurls": "~2.7.0",
+    "docpad": "~6.78.6",
+    "docpad-plugin-cleancss": "~2.1.0",
+    "docpad-plugin-cleanurls": "~2.8.1",
     "docpad-plugin-datefromfilename": "~2.0.4",
-    "docpad-plugin-eco": "~2.0.3",
-    "docpad-plugin-highlightjs": "~2.2.1",
+    "docpad-plugin-eco": "~2.1.0",
+    "docpad-plugin-highlightjs": "~2.4.0",
     "docpad-plugin-htmlmin": "~2.4.0",
     "docpad-plugin-marked": "~2.2.1",
     "docpad-plugin-moment": "~2.0.2",
-    "docpad-plugin-paged": "~2.2.5",
-    "docpad-plugin-rss": "~2.0.1",
+    "docpad-plugin-paged": "~2.4.0",
+    "docpad-plugin-rss": "~2.3.1",
     "docpad-plugin-services": "~2.6.0"
   },
   "devDependencies": {
-    "docpad-plugin-livereload": "~2.6.0"
+    "docpad-plugin-livereload": "~2.7.1"
   },
   "keywords": [
     "docpad",
     "blog",
     "docker"
   ],
-  "main": "node_modules/docpad/bin/docpad-server",
+  "main": "node_modules/.bin/docpad-server",
   "scripts": {
-    "start": "node_modules/docpad/bin/docpad-server"
+    "start": "node_modules/.bin/docpad-server",
+    "test": "node_modules/.bin/docpad generate --debug --silent",
+    "info": "node_modules/.bin/docpad info --silent"
   }
 }

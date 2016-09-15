@@ -2,3 +2,5 @@
 /*.iml
 /*.log
 /.docpad.db
+/node_modules
+/.autoenv*

@@ -91,8 +91,10 @@ docpadConfig = {
 
   plugins: {
     rss: {
-      collection: 'posts'
-      url: '/feed.xml'
+      default: {
+          collection: "posts",
+          url: "/feed.xml"
+      }
     }
     datefromfilename: {
       removeDate: true

@@ -1,4 +1,4 @@
 #!/bin/bash -x
-# used to  execute the website in a docker container. The exposed port 42042
+# used to  execute the website in a docker container. The exposed port 9778
 
-docker run -d -p 127.0.0.1:42042:9778 -v $(pwd):/www fboulay/website_docpad
+docker run -d -p 9778 fboulay/website_docpad
