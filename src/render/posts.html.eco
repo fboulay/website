@@ -40,6 +40,7 @@ menuOrder: 1
                 <% end %>
             </p>
         </header>
+docpad-plugin-paged: getPageUrl is already defined by another plugin. Use getPagedUrl instead.
 
         <div class="post-description">
             <p>
@@ -64,7 +65,7 @@ menuOrder: 1
             <% if @document.page.number is pageNumber: %>
             <li><a class="pure-button pure-button-active" href="#"><%= pageNumber + 1 %></a></li>
             <% else: %>
-            <li><a class="pure-button" href="<%= @getPageUrl(pageNumber) %>"><%= pageNumber + 1 %></a></li>
+            <li><a class="pure-button" href="<%= @getPagedUrl(pageNumber) %>"><%= pageNumber + 1 %></a></li>
             <% end %>
         <% end %>
 

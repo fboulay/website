@@ -6,6 +6,7 @@ docpadConfig = {
 # =================================
 # Template Configuration
   templateData:  {
+    port: 9778
     site:    {
       url: "http://blog.boulay.eu"
       title: "Florian's blog / Java & Co."
@@ -55,7 +56,10 @@ docpadConfig = {
 
     # Get the Absolute URL of a document
     getUrl: (document) ->
-      return @site.url + (document.url or document.get?('url'))
+      if (@port is 80)
+        @site.url + (document.url or document.get?('url'))
+      else
+        @site.url + ':' + @port + (document.url or document.get?('url'))
   }
   collections:  {
     pages: ->
@@ -63,15 +67,15 @@ docpadConfig = {
         model.setMetaDefaults({layout: "default"});
 
     posts: ->
-      @getCollection("html").findAllLive({relativeOutDirPath: 'post', isPagedAuto: $ne: true}, [{date: -1}]).on "add", (model) ->
+      @getCollection("html").findAllLive({relativeOutDirPath: 'posts', isPagedAuto: $ne: true}, [{date: -1}]).on "add", (model) ->
         model.setMetaDefaults({layout: "posts-layout"});
 
     notes: ->
-      @getCollection("html").findAllLive({relativeOutDirPath: 'ref'}, [{date: -1}]).on "add", (model) ->
+      @getCollection("html").findAllLive({relativeOutDirPath: 'notes'}, [{date: -1}]).on "add", (model) ->
         model.setMetaDefaults({layout: "posts-layout"});
 
     postsAndNotes: ->
-      @getCollection("html").findAllLive({relativeOutDirPath: $in: ['ref', 'post']}, [{date: -1}])
+      @getCollection("html").findAllLive({relativeOutDirPath: $in: ['notes', 'posts']}, [{date: -1}])
   }
   # =================================
   # Environment Configuration
@@ -85,6 +89,9 @@ docpadConfig = {
     development:    {
       templateData: {
         env:'dev'
+        site: {
+          url: "http://localhost"
+        }
       }
     }
   }
