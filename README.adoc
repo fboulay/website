@@ -1,0 +1,60 @@
+= Source code of my http://blog.boulay.eu[website]
+
+This website is using static files that are generated using http://docpad.org[DocPad].
+
+== How tu run
+
+=== Run in Docker
+
+==== 1. Install Docker
+
+See this http://docs.docker.com/installation/[page]. The installation depends of your OS.
+
+TIP: to be able to use docker without being root, you should add your user to the _docker_ group.
+
+==== 2. Create the Docker image
+
+[source,bash]
+----
+./build.sh
+----
+
+==== 3. Run the website in the Docker container
+
+The website is executed with the `production` environment in Docker, meaning that modifications of source files will not be reloaded automatically.
+
+[source,bash]
+----
+./run.sh
+----
+
+Go to http://localhost:9778[http://localhost:9778] to browse the website.
+
+=== Run without Docker
+
+==== 1. Install node.js and npm
+
+See this https://nodejs.org/en/download/package-manager/[page] to follow the right guide depending of your OS.
+
+==== 4. Install dependencies
+
+[source,bash]
+----
+$ npm install
+----
+
+==== 5. Run the website
+
+[source,bash]
+----
+$ docpad run
+----
+
+Then go to http://localhost:9778[http://localhost:9778] to browse the website.
+The website is reloaded automatically when changes occur on the source files.
+
+== Licence
+
+Licensed under the incredibly http://en.wikipedia.org/wiki/Permissive_free_software_licence[permissive] http://creativecommons.org/licenses/MIT/[MIT license]
+
+Copyright &copy; 2016 Florian Boulay
