@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Florian's website based on Pure CSS library",
   "author": "Florian Boulay <florian.boulay@gmail.com> (http://blog.boulay.eu)",
-  "licence": "MIT",
+  "license": "MIT",
   "engines": {
     "node": "4",
     "npm": "2"
