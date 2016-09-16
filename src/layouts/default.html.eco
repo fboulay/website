@@ -63,20 +63,17 @@ htmlmin: true
                 <li class="<%= @isMenuSelected(post) %>">
                     <a href="<%= post.url %>">
                         <%= post.title %>
-                        <% if post.relativeOutDirPath == "ref": %>
+                        <% if post.relativeOutDirPath == "notes": %>
                             <i>(note)</i>
+                        <% end %>
+                         <% if post.relativeOutDirPath == "drafts": %>
+                            <i>(draft)</i>
                         <% end %>
                     </a>
                 </li>
                 <% end %>
             </ul>
 
-            <!--<ul>-->
-
-            <!--<li class="menu-item-divided">-->
-            <!--<a href="#fork">Fork on Github</a>-->
-            <!--</li>-->
-            <!--<li><a href="#hello">Say hello</a></li>-->
             </ul>
         </div>
     </div>
@@ -101,16 +98,6 @@ htmlmin: true
             <%- @content %>
         </div>
     </div>
-
-    <!--<footer class="footer">-->
-    <!--<div class="pure-menu pure-menu-horizontal pure-menu-open">-->
-    <!--<ul>-->
-    <!--<li><a href="http://purecss.io/">About</a></li>-->
-    <!--<li><a href="http://twitter.com/yuilibrary/">Twitter</a></li>-->
-    <!--<li><a href="http://github.com/yui/pure/">Github</a></li>-->
-    <!--</ul>-->
-    <!--</div>-->
-    <!--</footer>-->
 
 </div>
 

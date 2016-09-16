@@ -8,7 +8,7 @@ layout: default
     <h1 class="content-subhead">Publié le <%= @moment(@document.date).format('DD/MM/YYYY') %></h1>
 
     <!-- A single blog post -->
-    <section class="post">
+    <section class="post <%='draft' if @document.relativeOutDirPath is 'drafts' %>">
         <header class="post-header">
 
             <a href="#post">

@@ -447,6 +447,10 @@ small screens.
     text-align: center;
 }
 
+.draft {
+    background-image: url(/img/draft.svg); 
+}
+
 /* -- Responsive Styles (Media Queries) ------------------------------------- */
 
 /*

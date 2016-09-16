@@ -20,7 +20,7 @@ menuOrder: 1
     <% for post in @getCollection("posts").toJSON()[@document.page.startIdx...@document.page.endIdx]: %>
     <h1 class="content-subhead">Le <%= @moment(post.date).format('DD/MM/YYYY') %></h1>
 
-    <section class="post">
+    <section class="post <%='draft' if post.relativeOutDirPath is 'drafts' %>">
         <header class="post-header">
             <!--<img class="post-avatar" alt="Florian avatar" height="48" width="48" src="/img/worm.png">-->
 
@@ -40,8 +40,6 @@ menuOrder: 1
                 <% end %>
             </p>
         </header>
-docpad-plugin-paged: getPageUrl is already defined by another plugin. Use getPagedUrl instead.
-
         <div class="post-description">
             <p>
                 <%- @extractSummary(post.contentRenderedWithoutLayouts) %>

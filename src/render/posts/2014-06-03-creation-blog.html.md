@@ -1,7 +1,6 @@
 ---
 title: "Le blog de trop ?"
 tags: "blog,docker,docpad,git"
-urls: ["/posts/creation-blog"]
 
 readingTime: 3 min
 ---
