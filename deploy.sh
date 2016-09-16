@@ -1,6 +1,5 @@
 #!/bin/bash -x
 # Used to deploy a new version of the website to the docker container
-set -e
 
 git fetch origin master
 git reset --hard origin/master
