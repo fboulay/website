@@ -1,4 +1,4 @@
-# docpad_ubuntu 
+# Running a website in Docpad 
 #
 # VERSION     1.2
 # Tested with Docker 1.6
