@@ -1,7 +1,7 @@
 # Create an image that can be used as a base for a Docpad website
 #
 # VERSION     1.4
-# Tested with Docker 1.6
+# Tested with Docker 1.12
 
 FROM node:6.5
 MAINTAINER Florian Boulay <florian.boulay@gmail.com>
