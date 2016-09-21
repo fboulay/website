@@ -1,0 +1,24 @@
+# Create an image that can be used as a base for a Docpad website
+#
+# VERSION     1.4
+# Tested with Docker 1.6
+
+FROM node:6.5
+MAINTAINER Florian Boulay <florian.boulay@gmail.com>
+
+# Install DocPad globally
+RUN npm install -g docpad
+
+# DocPad authentication
+RUN echo "{\n  subscribed: false\n  subscribeTryAgain: false\n  tos: true\n  identified: true\n}" > ~/.docpad.cson
+
+WORKDIR /app
+ONBUILD COPY package.json /app
+ONBUILD COPY docpad.* /app
+ONBUILD COPY src /app/src
+ONBUILD RUN npm install
+
+STOPSIGNAL SIGTERM
+
+ENTRYPOINT ["docpad", "run", "--env", "production"]
+EXPOSE 9778
