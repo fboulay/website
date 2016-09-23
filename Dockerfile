@@ -5,3 +5,5 @@
 
 FROM fboulay/website_docpad:1.4
 MAINTAINER Florian Boulay <florian.boulay@gmail.com>
+
+STOPSIGNAL SIGKILL
