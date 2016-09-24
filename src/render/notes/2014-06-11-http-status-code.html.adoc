@@ -1,0 +1,157 @@
+---
+title: "HTTP status codes"
+
+---
+
+<<b100,100>> <<b101,101>> <<b102,102>> <<b103,103>> <<b122,122>> | <<b200,200>> <<b201,201>> <<b202,202>> <<b203,203>> <<b204,204>> <<b205,205>> <<b206,206>> <<b207,207>> <<b208,208>> <<b226,226>> | <<b300,300>> <<b301,301>> <<b302,302>> <<b303,303>> <<b304,304>> <<b305,305>> <<b306,306>> <<b307,307>> <<b308,308>> | <<b400,400>> <<b401,401>> <<b402,402>> <<b403,403>> <<b404,404>> <<b405,405>> <<b406,406>> <<b407,407>> <<b408,408>> <<b409,409>> <<b410,410>> <<b411,411>> <<b412,412>> <<b413,413>> <<b414,414>> <<b415,415>> <<b416,416>> <<b417,417>> <<b418,418>> <<b420,420>> <<b422,422>> <<b423,423>> <<b424,424>> <<b426,426>> <<b428,428>> <<b429,429>> <<b431,431>> <<b444,444>> <<b449,449>> <<b450,450>> <<b451,451>> <<b499,499>>| <<b500,500>> <<b501,501>> <<b502,502>> <<b503,503>> <<b504,504>> <<b505,505>> <<b506,506>> <<b507,507>> <<b508,508>> <<b509,509>> <<b510,510>> <<b511,511>> <<b598,598>> <<b599,599>>
+
+== 1xx informational
+
+[[b100]]100:: Client should continue with request
+
+[[b101]]101:: Server is switching protocols
+
+[[b102]]102:: Server has received and is processing the request
+
+[[b103]]103:: Resume aborted PUT or POST requests
+
+[[b122]]122:: URI is longer than a maximum of 2083 characters
+
+== 2xx success
+
+[[b200]]200:: Standard response for successful HTTP requests
+
+[[b201]]201:: Request has been fulfilled; new resource created
+
+[[b202]]202:: Request accepted, processing pending
+
+[[b203]]203:: Request processed, information may be from another source
+
+[[b204]]204:: Request processed, no content returned
+
+[[b205]]205:: Request processed, no content returned, reset document view
+
+[[b206]]206:: Partial resource return due to request header
+
+[[b207]]207:: XML, can contain multiple separate responses
+
+[[b208]]208:: Results previously returned
+
+[[b226]]226:: Request fulfilled, reponse is instance-manipulations
+
+== 3xx redirection
+
+[[b300]]300:: Multiple options for the resource delivered
+
+[[b301]]301:: This and all future requests directed to the given URI
+
+[[b302]]302:: Temporary response to request found via alternative URI
+
+[[b303]]303:: Permanent response to request found via alternative URI
+
+[[b304]]304:: Resource has not been modified since last requested
+
+[[b305]]305:: Content located elsewhere, retrieve from there
+
+[[b306]]306:: Subsequent requests should use the specified proxy
+
+[[b307]]307:: Connect again to different URI as provided
+
+[[b308]]308:: Connect again to a different URI using the same method
+
+
+== 4xx client error
+
+[[b400]]400:: Request cannot be fulfilled due to bad syntax
+
+[[b401]]401:: Authentication is possible but has failed
+
+[[b402]]402:: Payment required, reserved for future use
+
+[[b403]]403:: Server refuses to respond to request
+
+[[b404]]404:: Requested resource could not be found
+
+[[b405]]405:: Request method not supported by that resource
+
+[[b406]]406:: Content not acceptable according to the Accept headers
+
+[[b407]]407:: Client must first authenticate itself with the proxy
+
+[[b408]]408:: Server timed out waiting for the request
+
+[[b409]]409:: Request could not be processed because of conflict
+
+[[b410]]410:: Resource is no longer available and will not be available again
+
+[[b411]]411:: Request did not specify the length of its content
+
+[[b412]]412:: Server does not meet request preconditions
+
+[[b413]]413:: Request is larger than the server is willing or able to process
+
+[[b414]]414:: URI provided was too long for the server to process
+
+[[b415]]415:: Server does not support media type
+
+[[b416]]416:: Client has asked for unprovidable portion of the file
+
+[[b417]]417:: Server cannot meet requirements of Expect request-header field
+
+[[b418]]418:: I'm a teapot
+
+[[b420]]420:: Twitter rate limiting
+
+[[b422]]422:: Request unable to be followed due to semantic errors
+
+[[b423]]423:: Resource that is being accessed is locked
+
+[[b424]]424:: Request failed due to failure of a previous request
+
+[[b426]]426:: Client should switch to a different protocol
+
+[[b428]]428:: Origin server requires the request to be conditional
+
+[[b429]]429:: User has sent too many requests in a given amount of time
+
+[[b431]]431:: Server is unwilling to process the request
+
+[[b444]]444:: Server returns no information and closes the connection
+
+[[b449]]449:: Request should be retried after performing action
+
+[[b450]]450:: Windows Parental Controls blocking access to webpage
+
+[[b451]]451:: The server cannot reach the client's mailbox.
+
+[[b499]]499:: Connection closed by client while HTTP server is processing
+
+== 5xx server error
+
+[[b500]]500:: Generic error message
+
+[[b501]]501:: Server does not recognise method or lacks ability to fulfill
+
+[[b502]]502:: Server received an invalid response from upstream server
+
+[[b503]]503:: Server is currently unavailable
+
+[[b504]]504:: Gateway did not receive response from upstream server
+
+[[b505]]505:: Server does not support the HTTP protocol version
+
+[[b506]]506:: Content negotiation for the request results in a circular reference
+
+[[b507]]507:: Server is unable to store the representation
+
+[[b508]]508:: Server detected an infinite loop while processing the request
+
+[[b500]]509:: Bandwidth limit exceeded
+
+[[b510]]510:: Further extensions to the request are required
+
+[[b511]]511:: Client needs to authenticate to gain network access
+
+[[b598]]598:: Network read timeout behind the proxy
+
+[[b599]]599:: Network connect timeout behind the proxy
