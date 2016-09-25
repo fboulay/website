@@ -1,0 +1,26 @@
+---
+title: "Le blog n'est pas abandonné"
+tags: "blog"
+
+readingTime: 2 min
+---
+
+J'ai enfin trouvé du temps à consacrer à mon blog, et j'ai toujours autant envie de partager sur de nombreux sujets.
+
+Comme cela fait 2 ans que je n'ai pas touché au blog, j'ai d'abord dû mettre à jour les technos faisant tourner le blog, à savoir node.js et docker avant de me mettre à rédiger des posts.
+
+== Mise à jour du blog
+
+J'en ai profité pour réecrire les quelques posts existant en Asciidoc (bye bye Markdown). Cependant il n'y avait pas de plugin Asciidoc pour Docpad. https://github.com/fboulay/docpad-plugin-asciidoc[J'en ai donc écrit un].
+
+J'en ai également profité pour mieux gérer les brouillons. Désormais ils sont dans leur propre répertoire, ce qui permet en local de pouvoir travailler dessus, et lorsque je déploie en prod, ils ne s'affichent pas.
+
+Il faudrait aussi que je fasse une petite mise à jour du thème.
+
+== La suite
+
+J'ai changé d'employeur depuis mon dernier post (remontant à 2 ans). Je ne travaille plus exclusivement sur la JVM, cela me permettra de diversifier les sujets que je vais évoquer.
+
+Pour rappel j'ai notamment envie de parler de NIO, Vert.x, Kafka etc...
+
+Merci aux quelques uns qui sont restés !

@@ -1,6 +1,6 @@
 # Create an image that can be used as a base for a Docpad website
 #
-# VERSION     1.4
+# VERSION     1.5
 # Tested with Docker 1.12
 
 FROM node:6.5
@@ -17,5 +17,5 @@ ONBUILD RUN npm install
 
 STOPSIGNAL SIGTERM
 
-ENTRYPOINT ["docpad", "run", "--env", "production"]
+ENTRYPOINT ["./node_modules/.bin/docpad", "run", "--env", "production"]
 EXPOSE 9778
