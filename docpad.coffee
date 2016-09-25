@@ -7,9 +7,9 @@ docpadConfig = {
 # Template Configuration
   templateData:  {
     port: 9778
-    site:    {
+    site:
       url: "http://blog.boulay.eu"
-      title: "Florian's blog / Java & Co."
+      title: "Florian's blog / Java & other tech"
       subtitle: "In code we trust"
       description: """
                    Florian's point of view on the software industry world, particularly about Open Source, Java, Android, Git, Docker, Docpad and so on
@@ -17,11 +17,11 @@ docpadConfig = {
       keywords: "open source, java, software, git, rtb, concurrency, nio, nosql, android"
       author: "Florian Boulay"
       email: "florian.boulay@gmail.com"
-      services: {
+      services:
         googleAnalytics: "UA-46239890-1"
         disqus: "blogboulayeu"
-      }
-    }
+
+
   # Get the prepared site/document title
   # Often we would like to specify particular formatting to our page's title
   # we can apply that formatting here
@@ -86,13 +86,12 @@ docpadConfig = {
   localeCode: "fr"
 
   environments:  {
-    development:    {
-      templateData: {
+    development:
+      templateData:
         env:'dev'
-        site: {
+        site:
           url: "http://localhost"
-        }
-      }
+
       collections:
         posts: ->
            @getCollection('html').findAllLive({relativeOutDirPath: {'$in' : ['posts', 'drafts']},  isPagedAuto: $ne: true}, [date: -1]).on "add", (model) ->
@@ -105,29 +104,21 @@ docpadConfig = {
          postsAndNotes: ->
            @getCollection("html").findAllLive({relativeOutDirPath: $in: ['drafts', 'notes', 'posts']}, [{date: -1}])
 
-    }
+
   }
 
-  plugins: {
-    rss: {
-      default: {
+  plugins:
+    rss:
+      default:
           collection: "posts",
           url: "/feed.xml"
-      }
-    }
-    datefromfilename: {
+    datefromfilename:
       removeDate: true
-    }  
-    cleancss: {
-      cleancssOpts: {
+    cleancss:
+      cleancssOpts:
         # * for keeping all (default), 1 for keeping first one only, 0 for removing all
         keepSpecialComments: '0'
-      }
-    }
-  }
 
-  # Regenerate every hour
-  #regenerateEvery: 3600000
 }
 
 # Export the DocPad Configuration

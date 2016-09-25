@@ -6,9 +6,6 @@
 FROM node:6.5
 MAINTAINER Florian Boulay <florian.boulay@gmail.com>
 
-# Install DocPad globally
-RUN npm install -g docpad
-
 # DocPad authentication
 RUN echo "{\n  subscribed: false\n  subscribeTryAgain: false\n  tos: true\n  identified: true\n}" > ~/.docpad.cson
 
