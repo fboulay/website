@@ -19,7 +19,7 @@ layout: default
                 <% if @document.tags: %>
                     Catégories :
                     <% for tag in @document.tags: %>
-                    <a class="post-category" href="#"><%= tag %></a>
+                    <a class="post-category post-category-white" href="#"><%= tag %></a>
                     <% end %>
                 <% end %>
                 <% if @document.readingTime: %>
@@ -33,6 +33,8 @@ layout: default
                 <%- @content %>
             </p>           
         </div>
+
+        <hr class="end-post">
 
         <p class="post-meta">
             Vous pouvez partager ce post :
