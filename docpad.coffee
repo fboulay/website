@@ -64,15 +64,15 @@ docpadConfig = {
   collections:  {
     pages: ->
       @getCollection("html").findAllLive({isPage: true, isPagedAuto: $ne: true}, [{menuOrder: 1}]).on "add", (model) ->
-        model.setMetaDefaults({layout: "default"});
+        model.setMetaDefaults({layout: "default-layout"});
 
     posts: ->
       @getCollection("html").findAllLive({relativeOutDirPath: 'posts', isPagedAuto: $ne: true}, [{date: -1}]).on "add", (model) ->
-        model.setMetaDefaults({layout: "posts-layout"});
+        model.setMetaDefaults({layout: "post-layout"});
 
     notes: ->
       @getCollection("html").findAllLive({relativeOutDirPath: 'notes'}, [{date: -1}]).on "add", (model) ->
-        model.setMetaDefaults({layout: "posts-layout"});
+        model.setMetaDefaults({layout: "post-layout"});
 
     postsAndNotes: ->
       @getCollection("html").findAllLive({relativeOutDirPath: $in: ['notes', 'posts']}, [{date: -1}])
@@ -98,11 +98,11 @@ docpadConfig = {
       collections:
         posts: ->
            @getCollection('html').findAllLive({relativeOutDirPath: {'$in' : ['posts', 'drafts']},  isPagedAuto: $ne: true}, [date: -1]).on "add", (model) ->
-             model.setMetaDefaults({layout: "posts-layout"});
+             model.setMetaDefaults({layout: "post-layout"});
         
          notes: ->
            @getCollection("html").findAllLive({relativeOutDirPath: {'$in' : ['notes', 'drafts']}}, [{date: -1}]).on "add", (model) ->
-             model.setMetaDefaults({layout: "posts-layout"});
+             model.setMetaDefaults({layout: "post-layout"});
         
          postsAndNotes: ->
            @getCollection("html").findAllLive({relativeOutDirPath: $in: ['drafts', 'notes', 'posts']}, [{date: -1}])
@@ -121,6 +121,11 @@ docpadConfig = {
       cleancssOpts:
         # * for keeping all (default), 1 for keeping first one only, 0 for removing all
         keepSpecialComments: '0'
+    tags:
+      relativeDirPath: 'category'
+      extension: '.html'
+      injectDocumentHelper: (doc) ->
+        doc.setMeta {layout: 'tag-layout'}
 
 
 }

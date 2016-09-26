@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default-layout
 ---
 
 
@@ -19,7 +19,7 @@ layout: default
                 <% if @document.tags: %>
                     Catégories :
                     <% for tag in @document.tags: %>
-                    <a class="post-category post-category-white" href="#"><%= tag %></a>
+                    <a class="post-category post-category-white" href="/category/<%= tag %>"><%= tag %></a>
                     <% end %>
                 <% end %>
                 <% if @document.readingTime: %>

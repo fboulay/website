@@ -1,0 +1,39 @@
+---
+layout: default-layout
+---
+
+<div class="header">
+    <h1>Tous les articles de la catégorie &ldquo;<%= @document.tag %>&rdquo;</h1>
+</div>
+
+<div class="posts posts-summary">
+
+    <% for post in @getCollection('html').findAll({layout: 'post-layout', tags: {$in: @document.tag}}, [{date: -1}]).toJSON(): %>
+    <h1 class="content-subhead">Le <%= @moment(post.date).format('DD/MM/YYYY') %></h1>
+
+    <section class="post <%='draft' if post.relativeOutDirPath is 'drafts' %>">
+        <header class="post-header">
+            <!--<img class="post-avatar" alt="Florian avatar" height="48" width="48" src="/img/worm.png">-->
+
+            <a href="<%= post.url %>">
+                <h2 class="post-title"><%= post.title %></h2>
+            </a>
+
+            <p class="post-meta">
+                <% if post.readingTime: %>
+                Temps de lecture <%= post.readingTime %>
+                <% end %>
+            </p>
+        </header>
+        <div class="post-description">
+            <p>
+                <%- @extractSummary(post.contentRenderedWithoutLayouts) %>
+            </p>
+        </div>
+        <div>
+            <a class="pure-button pure-button-small" href="<%= post.url %>">Lire la suite</a>
+        </div>
+    </section>
+    <% end %>
+
+</div>

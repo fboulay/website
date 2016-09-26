@@ -1,6 +1,6 @@
 ---
 title: "Page not found - 404"
-layout: "default"
+layout: default-layout
 name: error404
 dynamic: true
 ---

@@ -1,6 +1,6 @@
 ---
 title: "An internal error occured - 500"
-layout: "default"
+layout: default-layout
 name: error500
 dynamic: true
 ---

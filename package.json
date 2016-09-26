@@ -30,7 +30,8 @@
     "docpad-plugin-moment": "~2.0.2",
     "docpad-plugin-paged": "~2.4.0",
     "docpad-plugin-rss": "~2.3.1",
-    "docpad-plugin-services": "fboulay/docpad-plugin-services"
+    "docpad-plugin-services": "fboulay/docpad-plugin-services",
+    "docpad-plugin-tags": "~2.0.7"
   },
   "devDependencies": {
     "docpad-plugin-livereload": "~2.7.1"
