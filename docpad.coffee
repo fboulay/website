@@ -91,6 +91,9 @@ docpadConfig = {
         env:'dev'
         site:
           url: "http://localhost"
+          services:
+            googleAnalytics: false
+            disqus: false
 
       collections:
         posts: ->
@@ -118,6 +121,7 @@ docpadConfig = {
       cleancssOpts:
         # * for keeping all (default), 1 for keeping first one only, 0 for removing all
         keepSpecialComments: '0'
+
 
 }
 

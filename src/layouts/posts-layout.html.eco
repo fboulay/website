@@ -41,10 +41,6 @@ layout: default
             <a class="pure-button pure-button-xsmall btn-google" href="https://plus.google.com/share?url=<%= @getUrl(@document) %>" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">Google+</a>
         </p>
         
-        <% if 'development' in @getEnvironments(): %>
-            No comment in Development mode !
-        <% else: %>
-            <%- @getDisqus() %>
-        <% end %>
+        <%- @getDisqus() %>
     </section>
 </div>
