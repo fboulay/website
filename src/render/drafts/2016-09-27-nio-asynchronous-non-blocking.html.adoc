@@ -1,0 +1,23 @@
+---
+title: Nio ou entrées sorties non bloquantes et asycnrhones
+tags: nio,netty,asynchronous
+
+---
+
+Nio, entrées sorties non bloquantes et asynchrones.
+
+
+
+== Modèle réactif
+
+
+
+=== Références
+
+Netflix.footnoteref:[netflix, voir cet article du blog de Netflix http://techblog.netflix.com/2016/09/zuul-2-netflix-journey-to-asynchronous.html]
+
+Live.footnoteref:[netty, voir l'excellent de Norman Maurer _Netty In Action_ https://www.manning.com/books/netty-in-action]
+
+Article.footnoteref:[octo, voir l'article d'Octo http://blog.octo.com/la-genese-du-modele-reactif/]
+
+c10k.footnoteref:[c10k, voir cet article http://www.kegel.com/c10k.html]
