@@ -5,8 +5,8 @@
   "author": "Florian Boulay <florian.boulay@gmail.com> (http://blog.boulay.eu)",
   "license": "MIT",
   "engines": {
-    "node": "4",
-    "npm": "2"
+    "node": ">=4",
+    "npm": ">=2"
   },
   "maintainers": [
     {
@@ -19,18 +19,18 @@
     "url": "https://github.com/fboulay/website.git"
   },
   "dependencies": {
-    "docpad": "~6.78.6",
-    "docpad-plugin-asciidoc": "~2.0.0",
+    "docpad": "~6.79.0",
+    "docpad-plugin-asciidoc": "~2.1.0",
     "docpad-plugin-cleancss": "~2.1.0",
     "docpad-plugin-cleanurls": "~2.8.1",
     "docpad-plugin-datefromfilename": "~2.0.4",
     "docpad-plugin-eco": "~2.1.0",
     "docpad-plugin-highlightjs": "~2.4.0",
-    "docpad-plugin-htmlmin": "~2.4.0",
+    "docpad-plugin-htmlmin": "~2.4.3",
     "docpad-plugin-moment": "~2.0.2",
     "docpad-plugin-paged": "~2.4.0",
     "docpad-plugin-rss": "~2.3.1",
-    "docpad-plugin-services": "fboulay/docpad-plugin-services",
+    "docpad-plugin-services": "~2.6.0",
     "docpad-plugin-tags": "~2.0.7"
   },
   "devDependencies": {
