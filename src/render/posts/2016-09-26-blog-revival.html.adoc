@@ -1,8 +1,6 @@
 ---
 title: "Le blog n'est pas abandonné"
 tags: "blog"
-
-readingTime: 2 min
 ---
 
 J'ai enfin trouvé du temps à consacrer à mon blog, et j'ai toujours autant envie de partager sur de nombreux sujets.
