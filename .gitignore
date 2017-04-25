@@ -4,3 +4,4 @@
 /.docpad.db
 /node_modules
 /.autoenv*
+.idea/

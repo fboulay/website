@@ -1,0 +1,20 @@
+---
+title: "Devoxx france 2017 - À la découverte de clojure"
+tags: "clojure,conference"
+---
+
+J'ai donné une conférence intitulée _À la découverte de clojure_ cette année à Devoxx France 2017.
+
+== Liens
+
+Voici les liens intéressants.
+
+Slides ici : https://fboulay.github.io/devoxxfr-2017-clojure-discovery
+
+Vidéo ici : https://www.youtube.com/watch?v=z_KWmzs-j70
+
+Le code source de la démo sera disponible sous peu. Je mettrai à jour ce post une fois le lien disponible.
+
+== Prochaine conférence
+
+Je donnerai cette conférence dans une version revisitée lors des https://voxxeddays.com/luxembourg/[Voxxed Days] au luxembourg le 22 juin 2017. Venez nombreux !
